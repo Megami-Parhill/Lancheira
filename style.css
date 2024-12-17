@@ -2,14 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://img.freepik.com/vetores-premium/olhos-assustadores-assustadores-nos-olhos-de-monstro-escuros-halloween_709240-244.jpg');
-    background-size: cover; 
+    background-image: url('https://img.freepik.com/vetores-premium/olhos-assustadores-assustadores-nos-olhos-de-monstro-escuros-halloween_709240-244.jpg'); /* Imagem de fundo */
+    background-size: 750px; 
     color: #e0e0e0;
 }
 
 header {
-    background-color: rgba(92, 0, 0, 0.836);
-    color: #000000;
+    background-color: rgba(92, 0, 0, 0.836); /* Vermelho escuro semi-transparente */
+    color: #000000; /* Texto claro */
     padding: 20px;
     text-align: center;
 }
@@ -17,53 +17,52 @@ header {
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #00FF00;
+    color: #00FF00; /* Verde-limão para links */
 }
 
 nav a:hover {
-    color: #4B0082;
+    color: #4B0082; /* Roxo ao passar o mouse */
 }
 
 main {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     padding: 20px;
 }
 
 article {
-    border: 1px solid #333;
+    border: 1px solid #333; /* Borda escura */
     padding: 10px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 250px;
-    margin: 0 auto;
+    width: 950px; /* Defina a largura desejada */
+    margin: 0 auto; /* Centraliza o artigo */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco semi-transparente com menos opacidade */
 }
 
 button {
-    background-color: rgba(92, 0, 0, 0.836);
+    background-color: rgba(92, 0, 0, 0.836); /* Cor do botão */
     color: #fff;
-    border: 2px solid #333;
+    border: 2px solid #333; /* Borda escura para o botão */
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s; /* Adicionando transição para transformação */
 }
 
 button:hover {
-    background-color: #b60000;
-    transform: scale(1.1);
+    background-color: #b60000; /* Cor do botão ao passar o mouse */
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
-
 #menu article img {
-    width: 200px;
-    height: auto;
-    object-fit: contain;
+    width: 450px; /* Defina a largura desejada */
+    height: 450px; /* Defina a altura desejada */
+    object-fit: contain; /* Isso mantém a proporção da imagem sem cortá-la */
 }
-
+/* Estilo para a aba lateral do carrinho */
 #cart {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -300px; /* Começa fora da tela */
     width: 300px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.9);
@@ -74,7 +73,7 @@ button:hover {
 }
 
 #cart.open {
-    right: 0;
+    right: 0; /* Move para dentro da tela */
 }
 
 #cart h2 {
