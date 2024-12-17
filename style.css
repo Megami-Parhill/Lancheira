@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://wallpapers.com/images/high/black-texture-background-czsec2td39y7tjeo.webp'); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    color: #e0e0e0; /* Texto claro para contraste */
+}
+
+header {
+    background-color: rgba(92, 0, 0, 0.836); /* Vermelho escuro semi-transparente */
+    color: #000000; /* Texto claro */
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #00FF00; /* Verde-limão para links */
+}
+
+nav a:hover {
+    color: #4B0082; /* Roxo ao passar o mouse */
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    padding: 20px;
+}
+
+article {
+    border: 1px solid #333; /* Borda escura */
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco semi-transparente com menos opacidade */
+}
+
+button {
+    background-color: rgba(92, 0, 0, 0.836); /* Cor do botão */
+    color: #fff;
+    border: 2px solid #333; /* Borda escura para o botão */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Adicionando transição para transformação */
+}
+
+button:hover {
+    background-color: #b60000; /* Cor do botão ao passar o mouse */
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+#menu article img {
+    width: 450px; /* Defina a largura desejada */
+    height: 450px; /* Defina a altura desejada */
+    object-fit: contain; /* Isso mantém a proporção da imagem sem cortá-la */
+}
