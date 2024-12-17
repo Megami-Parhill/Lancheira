@@ -2,14 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://wallpapers.com/images/high/black-texture-background-czsec2td39y7tjeo.webp'); /* Imagem de fundo */
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    color: #e0e0e0; /* Texto claro para contraste */
+    background-image: url('https://img.freepik.com/vetores-premium/olhos-assustadores-assustadores-nos-olhos-de-monstro-escuros-halloween_709240-244.jpg');
+    background-size: cover; 
+    color: #e0e0e0;
 }
 
 header {
-    background-color: rgba(92, 0, 0, 0.836); /* Vermelho escuro semi-transparente */
-    color: #000000; /* Texto claro */
+    background-color: rgba(92, 0, 0, 0.836);
+    color: #000000;
     padding: 20px;
     text-align: center;
 }
@@ -17,42 +17,75 @@ header {
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #00FF00; /* Verde-limão para links */
+    color: #00FF00;
 }
 
 nav a:hover {
-    color: #4B0082; /* Roxo ao passar o mouse */
+    color: #4B0082;
 }
 
 main {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 20px;
 }
 
 article {
-    border: 1px solid #333; /* Borda escura */
+    border: 1px solid #333;
     padding: 10px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco semi-transparente com menos opacidade */
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 250px;
+    margin: 0 auto;
 }
 
 button {
-    background-color: rgba(92, 0, 0, 0.836); /* Cor do botão */
+    background-color: rgba(92, 0, 0, 0.836);
     color: #fff;
-    border: 2px solid #333; /* Borda escura para o botão */
+    border: 2px solid #333;
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Adicionando transição para transformação */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #b60000; /* Cor do botão ao passar o mouse */
-    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+    background-color: #b60000;
+    transform: scale(1.1);
 }
+
 #menu article img {
-    width: 450px; /* Defina a largura desejada */
-    height: 450px; /* Defina a altura desejada */
-    object-fit: contain; /* Isso mantém a proporção da imagem sem cortá-la */
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+#cart {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#cart.open {
+    right: 0;
+}
+
+#cart h2 {
+    margin-top: 0;
+}
+
+#cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart li {
+    margin: 10px 0;
 }
