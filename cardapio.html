@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="scripts.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanchonete do Terror - Cardápio</title>
@@ -22,7 +23,7 @@
     <main>
         <section id="menu">
             <article>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaJNthWJptlz9NMPMEosSRJG8-JnJE44TOvWDdUfHZP0vohU9-tN752TcDPBTRilvKB1tGz9abV8pB2yCh22m-CAm1S34EVlO3vbLekTnXFL66NWLwcdNjHS_kCRZ-TKqqo13EiQB3XQFL/s564/halloween-hamburguer-infantil.jpg" alt="Hambúrguer do Monstro">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaJNthWJptlz9NMPMEosSRJG8-JnJE44TOvWDdUfHZP0vohU9-tN752TcDPBTRilvKB1tGz9abV8pB2yCh22m-CAm1S34EVlO3vbLekTnXFL66NWLwcdNjHS_kCRZ-TKqqo13EiQB3XQFL/s564/halloween-hamburguer-infantil.jpg" alt="Hambúrgonstro">
                 <h2>Hambúrgonstro</h2>
                 <p>Delicioso hambúrguer com um toque de terror.</p>
                 <p>R$15,00</p>
@@ -36,28 +37,64 @@
                 <button class="btn-pedido" data-preco="25">Pedir ao Fantasma</button>
             </article>
             <article>
-                <img src="https://www.cozinharsemstress.pt/cozinhar/wp-content/uploads/2014/10/B-009-3553.jpg" alt="Sopa do Cthulhu">
+                <img src="https://www.cozinharsemstress.pt/cozinhar/wp-content/uploads/2014/10/B-009-3553.jpg" alt="Caldo abissal">
                 <h2>Caldo abissal</h2>
                 <p>Tem gosto de gente.</p>
                 <p>R$20,00</p>
                 <button class="btn-pedido" data-preco="20">Tem certeza?</button>
             </article>
             <article>
-                <img src="https://cdn.chefclub.tools/uploads/recipes/cover-thumbnail/2276d90f-bc01-4b8c-b09c-17f3da02b38f_oSxgGwx.jpg" alt="Salada do Terror">
+                <img src="https://cdn.chefclub.tools/uploads/recipes/cover-thumbnail/2276d90f-bc01-4b8c-b09c-17f3da02b38f_oSxgGwx.jpg" alt="Palhaçada">
                 <h2>Palhaçada</h2>
                 <p>Uma salada que vai te matar de rir, talvez.</p>
                 <p>R$18,00</p>
                 <button class="btn-pedido" data-preco="18">HAHAHAHAHAHA</button>
             </article>
             <article>
-                <img src="https://catracalivre.com.br/wp-content/uploads/2016/10/DrinkDraculacreditps.jpg" alt="Bebida Sombria">
+                <img src="https://catracalivre.com.br/wp-content/uploads/2016/10/DrinkDraculacreditps.jpg" alt="Suco de Vampiro">
                 <h2>Suco de Vampiro</h2>
                 <p>Popular em festas na Transilvania.</p>
                 <p>R$10,00</p>
                 <button class="btn-pedido" data-preco="10">Isso é sangue?</button>
             </article>
+            <article>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT__ewk6u_MoeZcjJRcsVM1lCpqnuUfTG3Jqw&s" alt="Drink favorito do cientista maluco">
+                <h2>Drink favorito do cientista maluco</h2>
+                <p>Criado a partir de um experimento falho.</p>
+                <p>R$20,00</p>
+                <button class="btn-pedido" data-preco="20">Chamar o doutor</button>
+            </article>
+            <article>
+                <img src="https://s2-casaejardim.glbimg.com/BNGVAml2k7rkQ02tzbX6JNPDKKI=/0x0:1280x853/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_a0b7e59562ef42049f4e191fe476fe7d/internal_photos/bs/2023/x/T/l9hiRQTHu9S0RmfOetyg/halloween-dia-bruxas-receitas-comidas-terror-festa-pexels-daisy-anderson-5582253.jpg" alt="Roscolhudas">
+                <h2>Roscolhudas</h2>
+                <p>Rosquinhas com vida, podem ou não gritar durante o consumo.</p>
+                <p>R$8,00 (unidade)</p>
+                <button class="btn-pedido" data-preco="8">Coitadas</button>
+            </article>
+            <article>
+                <img src="https://i0.wp.com/thathalloweenbro.com/wp-content/uploads/2021/06/IMG_1821.jpg?resize=1200%2C1200&ssl=1" alt="Trufas Vitimizadas">
+                <h2>Trufas Vitimizadas</h2>
+                <p>O que sobrou do último filme.</p>
+                <p>R$5,00 (unidade)</p>
+                <button class="btn-pedido" data-preco="5">Pobre trufa</button>
+            </article>
         </section>
     </main>
-    <script src="script.js"></script>
+
+    <div id="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; box-shadow:0 0 10px rgba(0,0,0 ,0.5); z-index:1001;">
+        <p id="modal-message"></p>
+        <button id="close-modal">Fechar</button>
+    </div>
+
+    <div id="cart" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
+        <h2>Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: R$ 0.00</p>
+        <button id="close-cart">Fechar</button>
+    </div>
+</body>
+</html>
+
+    </main>
 </body>
 </html>
