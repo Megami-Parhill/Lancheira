@@ -10,9 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Adiciona o item ao carrinho
             cart.push({ name: itemName, price: itemPrice });
 
-            // Exibe uma mensagem de confirmação
-            alert(`${itemName} foi adicionado ao carrinho!`);
-            
+            // Exibe a mensagem no modal
+            const modal = document.getElementById('modal');
+            const modalMessage = document.getElementById('modal-message');
+            modalMessage.textContent = `${itemName} foi adicionado ao carrinho!`;
+            modal.style.display = 'block';
+
             // Atualiza a exibição do carrinho
             updateCartDisplay();
         });
@@ -35,23 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para abrir/fechar o carrinho
     const cartIcon = document.getElementById('cart-icon');
-    const cartElement = document.createElement('div');
-    cartElement.id = 'cart';
-    cartElement.innerHTML = `
-        <h2>Carrinho</h2>
-        <ul id="cart-items"></ul>
-        <p id="cart-total">Total: R$ 0.00</p>
-        <button id="close-cart">Fechar</button>
-    `;
-    document.body.appendChild(cartElement);
+    const cartElement = document.getElementById('cart');
 
     cartIcon.addEventListener('click', () => {
-        cartElement.classList.toggle('open');
-        updateCartDisplay();
+        cartElement.style.display = cartElement.style.display === 'none' ? 'block' : 'none'; // Alterna a exibição do carrinho
+        updateCartDisplay(); // Atualiza a exibição do carrinho
     });
 
     // Fechar o carrinho
     document.getElementById('close-cart').addEventListener('click', () => {
-        cartElement.classList.remove('open');
+        cartElement.style.display = 'none'; // Oculta o carrinho
+    });
+    // Fechar o modal
+    document.getElementById('close-modal').addEventListener('click', () => {
+        document.getElementById('modal').style.display = 'none';
     });
 });
