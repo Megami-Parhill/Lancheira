@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="scripts.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanchonete do Terror - Contato</title>
@@ -21,12 +22,19 @@
     </header>
     <main>
         <section>
+            <article>
             <h2>Entre em Contato</h2>
-            <p>Se você tiver alguma dúvida ou quiser fazer um pedido, entre em contato conosco!</p>
-            <p>Telefone: (11) 1234-5678</p>
-            <p>Email: contato@lanchonetedoterror.com</p>
+                <p>Estamos sempre prontos para ouvir você! Se você tiver alguma dúvida, sugestão ou quiser fazer um pedido, não hesite em nos contatar. Nossa equipe está disponível para garantir que sua experiência na Lanchonete do Terror seja a mais satisfatória possível.</p>
+                <p>Você pode nos ligar pelo telefone <strong>(11) 1234-5678</strong> durante nosso horário de funcionamento, que é de segunda a sexta, das 8h às 18h. Se preferir, envie-nos um e-mail para <strong>contato@lanchonetedoterror.com</strong> e responderemos o mais rápido possível.</p>
+                <p>Além disso, siga-nos nas redes sociais para ficar por dentro das novidades e promoções assustadoras que preparamos para você. Estamos ansiosos para ouvir de você!</p>
+            </article>
         </section>
     </main>
-    <script src="script.js"></script>
+    <div id="cart" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
+        <h2>Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: R$ 0.00</p>
+        <button id="close-cart">Fechar</button>
+    </div>
 </body>
 </html>
