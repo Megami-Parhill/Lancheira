@@ -60,20 +60,20 @@ button:hover {
 }
 /* Estilo para a aba lateral do carrinho */
 #cart {
+    display: none; /* Começa escondido */
     position: fixed;
-    top: 0;
-    right: -300px; /* Começa fora da tela */
-    width: 300px;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease;
+    color: black;
     padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
 #cart.open {
-    right: 0; /* Move para dentro da tela */
+    display: block; /* Exibe o carrinho quando a classe 'open' é adicionada */
 }
 
 #cart h2 {
@@ -87,4 +87,7 @@ button:hover {
 
 #cart li {
     margin: 10px 0;
+}
+#modal-message {
+    color: black;
 }
