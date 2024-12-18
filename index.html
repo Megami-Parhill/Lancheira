@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="scripts.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lanchonete do Terror - Home</title>
@@ -20,15 +21,20 @@
         </nav>
     </header>
     <main>
-        <section>
+        <article>
             <h2>Bem-vindo à Lanchonete do Terror!</h2>
-            <p>Prepare-se para uma experiência gastronômica assustadora com nossos pratos temáticos.</p>
-            <p>Explore nosso cardápio e descubra delícias que vão te deixar arrepiado!</p>
-        </section>
+            <p>Na Lanchonete do Terror, cada refeição é uma aventura arrepiante! Nossos pratos são inspirados em lendas urbanas e histórias de terror, proporcionando uma experiência única que vai além do paladar. Desde o nosso famoso "Hambúrguer do Monstro" até a "Pizza Fantasma", cada item do nosso cardápio é preparado com ingredientes frescos e uma pitada de mistério.</p>
+            <p>Venha explorar nosso cardápio assustador e descubra delícias que vão te deixar arrepiado! Não se esqueça de experimentar nossas bebidas temáticas, como o "Suco de Vampiro", que promete refrescar até os mais corajosos. Aqui, o medo é apenas o começo de uma refeição inesquecível!</p>
+        </article>
     </main>
+    <div id="cart" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
+        <h2>Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: R$ 0.00</p>
+        <button id="close-cart">Fechar</button>
+    </div>
     <footer>
         <p>Contato: (11) 1234-5678</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
